@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "grpc-test/grpctest";
+
+package grpctest;
+
+service PersonService {
+    rpc GetFeature(Person) returns (Feature) {}
+}
+
+message Person {
+    int32 id = 1;
+}
+
+message Feature {
+    string name = 1;
+}
